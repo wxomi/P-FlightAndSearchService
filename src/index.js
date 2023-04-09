@@ -6,10 +6,12 @@ const { PORT, DB_SYNC } = require("./config/serverConfig");
 const db = require("./models/index");
 const ApiRoutes = require("./routes/index");
 const { Sequelize } = require("sequelize");
+// const config = require("./config/config.json");
+const env = process.env.NODE_ENV || "development";
+const config = require("./config/config.json")[env];
 
 const setupAndStartServer = async () => {
   //create the express direct
-
   const sequelize = new Sequelize(
     config.database,
     config.username,

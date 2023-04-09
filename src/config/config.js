@@ -1,3 +1,4 @@
+// require("dotenv").config();
 config = {
   dialect: "postgres",
   host: process.env.DB_HOST,
@@ -14,5 +15,7 @@ config = {
 };
 
 module.exports = {
-  config,
+  development: config,
+  test: config,
+  production: config,
 };
