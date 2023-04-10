@@ -66,15 +66,15 @@ class AirportService extends CrudService {
   //   }
   // }
 
-  // async getAirportByCityId(cityId) {
-  //   try {
-  //     const airports = await this.AirportRepository.getAirportByCityId(cityId);
-  //     return airports;
-  //   } catch (error) {
-  //     console.log("Something went wrong at Service Layer");
-  //     throw { error };
-  //   }
-  // }
+  async getAirportByCityId(cityId) {
+    try {
+      const airports = await this.AirportRepository.getAirportByCityId(cityId);
+      return airports;
+    } catch (error) {
+      console.log("Something went wrong at Service Layer");
+      throw { error };
+    }
+  }
 }
 
 module.exports = AirportService;

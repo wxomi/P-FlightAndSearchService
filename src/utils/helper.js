@@ -1,6 +1,6 @@
-function compareTime(timeString1, timeString2) {
-  let dateTime1 = new Date(timeString1);
-  let dateTime2 = new Date(timeString2);
+function compareTime(arrival, departure) {
+  let dateTime1 = new Date(arrival);
+  let dateTime2 = new Date(departure);
   return dateTime1.getTime() < dateTime2.getTime();
 }
 

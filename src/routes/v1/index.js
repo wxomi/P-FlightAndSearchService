@@ -4,6 +4,7 @@ const {
   CityController,
   AirportController,
   FlightController,
+  AirplaneController,
 } = require("../../controllers/index");
 
 const router = express.Router();
@@ -20,6 +21,9 @@ router.delete("/airport/:id", AirportController.destroy);
 router.get("/airport/:id", AirportController.get);
 router.get("/airport", AirportController.getAll);
 router.patch("/airport/:id", AirportController.update);
+
+//Airplane
+router.get("/airplanes", AirplaneController.getAll);
 
 // // //
 router.get("/cities/:cityId/airports", AirportController.getAirportsByCityId);
